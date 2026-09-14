@@ -9,6 +9,36 @@
 <h2>creacion de commit en develop</h2>
 <h3>primer commit con branch develop</h3>
 <h3>prueba con branch develop</h3>
+<table style="background-color: brown;">
+<th><h3>Funcionamiento de boton</h3></th>
+<tr><td>Edad Actual      <input id="Edad" type="number"></td></tr> 
+<tr><td>Tu edad<input id="Anio" type="number" readonly></td></tr>
+<tr><td><center><button id="Calcular" onclick="calcularNacimiento()">Calcular</button></center></td></tr>
+
+
+</table>
+<script>
+function calcularNacimiento(){
+
+var edad = document.getElementById("Edad").value;
+var anioo = new Date().getFullYear();
+var resultado1 = anioo - edad;
+document.getElementById("Anio").value = resultado1;
+
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+
 
 </body>
 
