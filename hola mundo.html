@@ -17,6 +17,16 @@
 
 
 </table>
+<center>
+<table>
+<th><h3>Gastos de 3 meses</h3></th>
+<tr><td>Enero<input type="number" id="enero"></td></tr>
+<tr><td>Febrero<input type="number" id="febrero"></td></tr>
+<tr><td>Marzo<input type="number" id="marzo"></td></tr>
+<tr><td style="background-color: blueviolet;">Gastos totales <input type="number" id="gastos" readonly></td></tr>
+<tr><td><center><button id="boton" onclick="calcularGastos()">Calcular</button></center></td></tr>
+</table>
+</center>
 <script>
 function calcularNacimiento(){
 
@@ -24,19 +34,20 @@ var edad = document.getElementById("Edad").value;
 var anioo = new Date().getFullYear();
 var resultado1 = anioo - edad;
 document.getElementById("Anio").value = resultado1;
+}
+  
+</script>
+<script>
+function calcularGastos(){
 
-
-
+var ene = Number (document.getElementById("enero").value);
+var feb = Number (document.getElementById("febrero").value);
+var mar = Number (document.getElementById("marzo").value);
+var gastost = ene + feb + mar;
+document.getElementById("gastos").value = gastost;
 
 }
-
-
-
-
-
-
 </script>
-
 
 
 
